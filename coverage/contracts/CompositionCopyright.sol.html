@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\CompositionCopyright.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> CompositionCopyright.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>44/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>45/45</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">87×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.8.0;
+&nbsp;
+&nbsp;
+contract CompositionCopyright {
+    struct MerKleTree {
+        bytes32 root;
+        uint64 usedLeafAmount;
+        uint64 totalLeafAmount;
+    }
+    
+    mapping( address =&gt; MerKleTree ) public collections;
+&nbsp;
+    event Update(address user, bytes4 timestamp,bytes32 newHashedText);
+&nbsp;
+    function initMyCollection() public{
+        require(collections[msg.sender].totalLeafAmount==0, "this collection already set up");
+        collections[msg.sender].root = bytes32(0xd5b8fa88c09fea4f693b28f86349b919b83fa417f3712b946a29ce30922c69ef);  // hash for 3 layer root hash
+        collections[msg.sender].totalLeafAmount = 4;
+        collections[msg.sender].usedLeafAmount = 0;
+    }
+&nbsp;
+    // helper partially from Daug's voting.sol
+    // https://hoytech.github.io/blockchain-storage/lesson2/voting.html
+    function leafHash(bytes32 leaf, bytes4 time) private view returns(bytes32) {
+        if(bytes32(0x0000000000000000000000000000000000000000000000000000000000005f5f) == leaf){
+            // if the leaf is EMPTY, hash as usual
+            return keccak256(abi.encodePacked(uint8(0x00), leaf));
+        }else{
+            // if the leaf is not EMPTY, hash with simplified current time
+            bytes4 currentTime;
+            if(time!=0){
+                currentTime = time;
+            } else {
+                currentTime = getTime();
+            }
+            return keccak256(abi.encodePacked(currentTime,uint8(0x00), leaf));
+            
+        }
+    }
+&nbsp;
+    // helper from Daug's voting.sol
+    function nodeHash(bytes32 left, bytes32 right) private pure returns(bytes32) {
+        return keccak256(abi.encodePacked(uint8(0x01), left, right));
+    }
+    
+    // reused from my voting.sol
+    function verify(uint64 path, bytes32[] memory witnesses, address author, bytes32 hashedText, bytes4 time) public view{
+        bytes32 reducedHash = leafHash(hashedText, time);
+        for(uint i=0; i&lt;witnesses.length; i++){
+            // determine left or right
+            if (((path &gt;&gt; i) &amp; 1) == 1){
+                reducedHash = nodeHash(witnesses[i], reducedHash);
+            }else{
+                reducedHash = nodeHash(reducedHash, witnesses[i]);
+            }
+        }
+        require(collections[author].root == reducedHash, "hash not match");
+    }
+    
+    // witnesses is used to prove the position is empty
+    // need to add time
+    function updateLeaf(bytes32[] memory witnesses, bytes32 newHashedText) public {
+        address user = msg.sender;
+        MerKleTree storage tree = collections[user];
+        uint64 usedLeafAmount = tree.usedLeafAmount;
+        require(usedLeafAmount &lt; tree.totalLeafAmount, "the tree is full");
+        // make sure the leaf is empty
+        verify(usedLeafAmount, witnesses, user, 0x0000000000000000000000000000000000000000000000000000000000005f5f, 0);
+        bytes32 reducedHash = leafHash(newHashedText, 0);
+        // calculate the new root hash
+        for(uint i=0; i&lt;witnesses.length; i++){
+            // determine left or right
+            if (((usedLeafAmount &gt;&gt; i) &amp; 1) == 1){
+                reducedHash = nodeHash(witnesses[i], reducedHash);
+            }else{
+                reducedHash = nodeHash(reducedHash, witnesses[i]);
+            }
+        }
+        // change tree
+        tree.root = reducedHash;
+        tree.usedLeafAmount = usedLeafAmount + 1;
+        emit Update(user, getTime(), newHashedText);
+    }
+&nbsp;
+    function getEmptyTreeRootHash(uint leavesAmount) private pure returns(bytes32) {
+        // hardcoded the 4-layers empty tree root hash
+        bytes32 reducedHash = bytes32(0xd5b8fa88c09fea4f693b28f86349b919b83fa417f3712b946a29ce30922c69ef);
+        for(uint i=4; i &lt; leavesAmount; i = i &lt;&lt; 1){
+            reducedHash = nodeHash(reducedHash, reducedHash);
+        }
+        return reducedHash;
+    }
+&nbsp;
+&nbsp;
+    // append an empty tree with the same size to the old tree
+    // height + 1
+    // capacity * 2
+    function expandTree() public{
+        MerKleTree storage tree = collections[msg.sender];
+        bytes32 currentRoot = tree.root;
+        uint64 totalLeafAmount = tree.totalLeafAmount;
+        require(currentRoot != 0, "the tree has not been initialized");
+        require(tree.usedLeafAmount == totalLeafAmount, "the tree is not yet full");
+        // recalculate the hash
+        tree.root = nodeHash(currentRoot, getEmptyTreeRootHash(totalLeafAmount));
+        // double total leaves amount
+        totalLeafAmount = totalLeafAmount &lt;&lt; 1;
+        tree.totalLeafAmount = totalLeafAmount;
+    }
+    
+    function getTime() public view returns(bytes4 time){
+        bytes memory result =  abi.encodePacked(block.timestamp / 100000);
+        assembly {
+            time := mload(add(result, 60))
+        }
+    }
+&nbsp;
+    
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 03 2021 01:51:09 GMT-0400 (Eastern Daylight Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
